@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Special+Elite);
+
+$default_size: 20px;
+
+.btn{
+    margin-top: 25px;
+}
+
+label{
+    @extend .btn;
+    font-size: $default_size;
+}
+
+ul{
+    height: 200px;
+    width: 50%;
+    overflow-y: scroll;
+    
+    //players list on games#show
+    li{
+        font-size: $default_size;
+    }
+}
+
+body{
+    background-color: whitesmoke !important;
+}
+
+.wrapper, footer{
+    font-family: 'Special Elite', cursive;
+}
+
+#title{
+    font-size: 50px;
+}
+
+#contact{
+    color: #000;
+    margin-top: 25em;
+}
+
+#players_column{
+    text-align: right;
+}
+
+#map{
+    width: 30em;
+    height: 30em;
+}
+
+#living{
+    margin-left: 25%;
+    text-align: left;
+}

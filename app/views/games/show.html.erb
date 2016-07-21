@@ -1,0 +1,25 @@
+
+<div class="row text-center">
+    <div class="col-lg-6">
+        <%=image_tag "map.png", class: 'img-circle', id: 'map'%>
+        <!--open script tag and initialize new field class-->
+    </div>
+    <div class="col-lg-6">
+        <h1>Living Players:</h1>
+        <br>
+        <ul id="living">
+        <%@living.each do |l|%>
+                <li><%=l.name%></li>
+        <%end%>
+        </ul>
+        <%if @done%>
+            <%=link_to 'New Game', games_path, class: 'btn btn-default'%>
+        <%else%>
+            <%=link_to 'Next Round', game_path, class: 'btn btn-default'%>
+        <%end%>
+    </div>
+</div>
+<div class="row text-center">
+    <!--newsreel-->
+    <!--animate using jquery and jquery animations-->
+</div>

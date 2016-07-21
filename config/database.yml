@@ -1,0 +1,21 @@
+#Postgresql 9.5
+#ensure that pg is installed in Gemfile
+#gem "pg"
+#gem install "pg"
+
+default: &default
+  adapter: postgresql
+  username: *
+  password: *
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  database: *
+
+test:
+  <<: *default
+
+production:
+  <<: *default

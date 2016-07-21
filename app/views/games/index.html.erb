@@ -1,0 +1,8 @@
+<h1 id="title" class="text-center">TAMPER</h1>
+<div class="row text-center" id="begin">
+    <h3 id="intro">At Ridgewood High School in Ridgewood NJ, in 2015, the sophomore AP US History class had a hypothetical discussion regarding which Ridgewood High School student would best survive in an anarchic, post-apocalyptic world. As a solution, TAMPER was born. TAMPER is a battle simulator that determines who out of a group of participants would most likely survive in a world similar to the one Suzanne Collins illustrates in "The Hunger Games." Using an advanced algorithm that assesses participants based on their emotional and physical attributes, TAMPER accurately selects the strongest of all candidates and names them the victor. Enjoy facing off against friends, family, and enemies on the battlefield</h3>
+    <!--form used to initiate new game-->
+    <%=form_for :games, url: game_path(:id => @id) do |f|%>
+        <%=f.submit 'Join the Game', class: 'btn btn-default', style: 'border-radius: 100px; font-size: 25px;'%>
+    <%end%>
+</div>

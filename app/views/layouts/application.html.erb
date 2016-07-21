@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TAMPER</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!--bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <%=csrf_meta_tags%>
+  <meta name="author" content="Christian Sermetis">
+  <meta name="keywords" content="alive, dead, battle, TAMPER">
+  <%=Gon::Base.render_data%>
+</head>
+<body>
+  <div class="wrapper">
+    <%= yield %>
+  </div>
+  <footer class="text-center" id="contact">
+        <p>TAMPER is an open-source project developed by Christian Seremetis, click <a href="https://github.com/cseremetis/hgsimulator">here</a> to see the source code</p>
+  </footer>
+</body>
+</html>

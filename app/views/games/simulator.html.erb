@@ -1,0 +1,53 @@
+
+<div class="row text-center">
+    <h1>Define Opponents</h1>
+</div>
+
+<div>
+    <%if @alert%>
+        <script>
+            $(document).ready(function(){
+               alert("The character you created already exists. Please add a new character"); 
+            });
+        </script>
+    <%end%>
+</div>
+
+<div class="container">
+    <div class="col-lg-6">
+        <!--form used to add new players to existing game-->
+        <%=form_for :player, url: game_path do |f|%>
+            <%=f.label 'name'%><br>
+            <%=f.text_field :name, value: 'Primrose Everdeen'%><br>
+            <%=f.label 'age'%><br>
+            <%=f.text_field :age, value: '12'%><br>
+            <%=f.label 'special skill'%><br>
+            <%=select_tag :skill, options_for_select([['combat', 1], ['camouflage', 2], ['survival', 3], ['none', 4]])%><br>
+            <%=f.label 'Ability to Improvise'%><br>
+            <%=select_tag :improvise, options_for_select([[1], [2], [3], [4], [5]])%><br>
+            <%=f.label 'Combat Skills'%><br>
+            <%=select_tag :combat, options_for_select([[1], [2], [3], [4], [5]])%><br>
+            <%=f.label 'sociability'%><br>
+            <%=select_tag :sociability, options_for_select([[1], [2], [3], [4], [5]])%><br>
+            <%=f.label 'Kindness'%><br>
+            <%=select_tag :kindness, options_for_select([[1], [2], [3], [4], [5]])%><br>
+            <%=f.label 'Physical Strength'%><br>
+            <%=select_tag :strength, options_for_select([[1], [2], [3], [4], [5]])%><br>
+            <%=f.label 'Emotional Endurance'%><br>
+            <%=select_tag :emotions, options_for_select([[1], [2], [3], [4], [5]])%><br>
+            <%=f.label 'Intelligence'%><br>
+            <%=select_tag :intelligence, options_for_select([[1], [2], [3], [4], [5]])%><br>
+            <%=f.submit 'Add Player', class: 'btn btn-default'%>
+        <%end%>
+        <%=link_to 'Run Simulator', game_path, class: 'btn btn-default'%>
+    </div>
+    <div class="col-lg-6" id="players_column">
+        <h1>Players:</h1>
+        <%if @every_player != nil%>
+            <%@every_player.each do |a|%>
+                <p><%=a.name%></p>
+                
+            <%end%>
+        <%end%>
+    </div>
+</div>
