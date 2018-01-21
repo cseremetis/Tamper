@@ -15,9 +15,6 @@ module Simulate
         end
         
         for i in 0...(players.length/2)
-            #there is almost definitely a better way to do this
-            #but right now I am very tired
-            #please forgive my laziness
             a = players[@factor]; @factor += 1
             b = players[@factor]; @factor += 1
 
