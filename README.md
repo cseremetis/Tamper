@@ -11,7 +11,7 @@ a program used to determine who out of a group of participants would win in a de
 
 * System dependencies: 
 
-* Database: SQlite3
+* Database: PostgreSQL
 
 * Resources: games, players
 
