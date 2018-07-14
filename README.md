@@ -14,6 +14,6 @@ a program used to determine who out of a group of participants would win in a de
 
 * Resources: games, players
 
-* Simulation algorithm found at:
+* Simulation algorithm found at: <tt>app/helpers/simulate.rb</tt>
 
-<tt>app/helpers/simulate.rb</tt>
+## Application available [HERE](http://tamper.herokuapp.com)
