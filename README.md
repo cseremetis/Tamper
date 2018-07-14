@@ -1,11 +1,11 @@
-#TAMPER
+# TAMPER
 =========
 
-##purpose:
+## purpose:
 
 a program used to determine who out of a group of participants would win in a death battle similar to the Hunger Games
 
-##construction details
+## construction details
 
 * Ruby version: 2.2.4
 
